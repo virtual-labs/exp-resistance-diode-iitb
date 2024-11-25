@@ -1,1 +1,1 @@
-## Experiment name
+## To study P-N junction diode Characteristics
