@@ -1,0 +1,13 @@
+<div class="offcanvas offcanvaselement offcanvas-end" tabindex="-1" id="offcanvasRight1"
+aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel1"></h5>
+    <button id="hide_panel1" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div id="panel1" class="offcanvas-body">
+
+    
+</div>
+</div>
+</div>
+</div>
