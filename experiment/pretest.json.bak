@@ -1,0 +1,47 @@
+[
+   {
+      "question": "What is the forward voltage drop of a typical silicon diode?",
+      "qid": 1,
+      "option_a": "0.2 V",
+      "option_b": "0.7 V",
+      "option_c": "1.1 V",
+      "option_d": "1.5 V",
+      "correct_option": "b"
+   },
+   {
+      "question": "In which direction does current flow in a diode when forward biased?",
+      "qid": 2,
+      "option_a": "Anode to cathode",
+      "option_b": "Cathode to anode",
+      "option_c": "Both directions",
+      "option_d": "No current flows",
+      "correct_option": "a"
+   },
+   {
+      "question": "What happens to a diode when it is reverse-biased?",
+      "qid": 3,
+      "option_a": "It conducts heavily",
+      "option_b": "It blocks current",
+      "option_c": "It behaves like a resistor",
+      "option_d": "It generates heat",
+      "correct_option": "b"
+   },
+   {
+      "question": "What happens to the current when a p-n junction diode is forward-biased?",
+      "qid": 4,
+      "option_a": "Current remains constant",
+      "option_b": "No current flows",
+      "option_c": "Current increases as voltage increases",
+      "option_d": "Current decreases",
+      "correct_option": "c"
+   },
+   {
+      "question": "Which of these components can be used for rectification?",
+      "qid": 5,
+      "option_a": "Transistor",
+      "option_b": "Diode",
+      "option_c": "Resistor",
+      "option_d": "Capacitor",
+      "correct_option": "b"
+   }
+]
