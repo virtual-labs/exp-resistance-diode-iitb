@@ -284,7 +284,7 @@ function a2_load_table1() {
 	}
 
 	let template = `<div id="a2-table-1" class='table-responsive' style=" width:5%; position:absolute; right:8vw; top:8vw; ">
-      <div hidden class="p-2 my-2" id="reverse-bias-note" style="color:red; font-size:17px; font-weight:bold;">For reverse bias enter negative values in observation table. <br> eg:- 2 = -2</div>
+      <div hidden class="p-2 my-2" id="reverse-bias-note" style="color:red; font-size:17px; font-weight:bold;">For reverse bias enter negative current and voltage values in observation table. <br> eg:- 2 = -2</div>
       <table class='table' id="a2-datatable" style="text-align:center;">
          <thead class='table-dark'>
             <tr >
