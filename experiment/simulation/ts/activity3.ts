@@ -27,13 +27,13 @@ function activity3() {
 	);
 
 	let content = `
-         <div class="row justify-content-evenly my-2 mx-auto" style="width: 90%;">
-            <button  class="btn btn-primary m-1" style="font-size: 1.2vw; width:30%;" onclick="calculation_for_plot(true)" >Plot the graph for forward bias</button>
-         
-            <button  class="btn btn-primary m-1" style="font-size: 1.2vw; width:30%;" onclick="calculation_for_plot(false)" >Plot the graph for reverse bias</button>
+       <div class="row justify-content-evenly my-2 mx-auto" style="width: 90%;">
+         <button  class="btn btn-primary m-1" style="font-size: 1.2vw; width:30%;" onclick="calculation_for_plot(true)" >Plot the graph for forward bias</button>
+       
+         <button  class="btn btn-primary m-1" style="font-size: 1.2vw; width:30%;" onclick="calculation_for_plot(false)" >Plot the graph for reverse bias</button>
 
-            <button  class="btn btn-primary m-1" style="font-size: 1.2vw; width:30%;" onclick="display_data_div()" >Verify values</button>
-         </div>
+         <button  class="btn btn-primary m-1" style="font-size: 1.2vw; width:30%;" onclick="display_data_div()" >Verify values</button>
+       </div>
 
          <div style="height:90%; width:97%; display: none;" id="act3-canvas-div">
             <canvas  id="act3-graph" ></canvas>
@@ -47,16 +47,18 @@ function activity3() {
                   <div class="col-md-3">
                      V<sub>F</sub> = 
                   </div>
-                  <div class="justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
+                  <div class="row justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
                      <input  type='number' style="margin:0 5px; width:90%" id='act3-v-f-inp' class='form-control fs-16px' />
+                     <span style="display:contents;">V</span>
                   </div>
                </div>
                <div class="col-md-5 row justify-content-center" style="align-items:center; font-size:1.8vw;">
                   <div class="col-md-3">
                      I<sub>F</sub> = 
                   </div>
-                  <div class="justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
+                  <div class="row justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
                      <input  type='number' style="margin:0 5px; width:90%" id='act3-i-f-inp' class='form-control fs-16px' />
+                     <span style="display:contents;">mA</span>
                   </div>
                </div>
             </div>
@@ -65,7 +67,7 @@ function activity3() {
                   <div class="col-md-3">
                      &Delta;V<sub>F</sub> = 
                   </div>
-                  <div class="justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
+                  <div class="row justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
                      <input  type='number' style="margin:0 5px; width:90%" id='act3-del-v-f-inp' class='form-control fs-16px' />
                   </div>
                </div>
@@ -73,7 +75,7 @@ function activity3() {
                   <div class="col-md-3">
                      &Delta;I<sub>F</sub> = 
                   </div>
-                  <div class="justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
+                  <div class="row justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
                      <input  type='number' style="margin:0 5px; width:90%" id='act3-del-i-f-inp' class='form-control fs-16px' />
                   </div>
                </div>
@@ -83,22 +85,24 @@ function activity3() {
                   <div class="col-md-3">
                      V<sub>R</sub> = 
                   </div>
-                  <div class="justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
+                  <div class="row justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
                      <input  type='number' style="margin:0 5px; width:90%" id='act3-v-r-inp' class='form-control fs-16px' />
+                     <span style="display:contents;">V</span>
                   </div>
                </div>
                <div class="col-md-5 row justify-content-center" style="align-items:center; font-size:1.8vw;">
                   <div class="col-md-3">
                      I<sub>R</sub> = 
                   </div>
-                  <div class="justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
+                  <div class="row justify-content-center col-md-3" style="flex-wrap:nowrap; align-items:center;">
                      <input  type='number' style="margin:0 5px; width:90%" id='act3-i-r-inp' class='form-control fs-16px' />
+                     <span style="display:contents;">mA</span>
                   </div>
                </div>
             </div>
             <br>
             
-            <div>
+            <div id='act3-ratio-div'>
                $$
                   \\begin{aligned}
                      \\text{Forward static resistance}(R_F) &= \\frac{V_F}{I_F} \\\\ \\\\
@@ -106,6 +110,9 @@ function activity3() {
                      \\text{Reverse static resistance}(R_R) &= \\frac{V_R}{I_R}
                   \\end{aligned}
             $$
+            </div>
+            <div style='color:red; font-weight:500;'>
+               Note: Enter V<sub>R</sub> and I<sub>R</sub> values in negative
             </div>
          </div>
 
@@ -182,6 +189,10 @@ function a3_verify() {
 		document.getElementById('act3-i-r-inp')
 	);
 
+	let ratio_div: HTMLDivElement = <HTMLDivElement>(
+		document.getElementById('act3-ratio-div')
+	);
+
 	console.log('V_f', V_f);
 	console.log('I_f', I_f);
 	console.log('del_v_f', del_v_f);
@@ -238,6 +249,24 @@ function a3_verify() {
 		i_r_inp.disabled = true;
 	}
 
+	alert('Successfully verified the values!');
+
+	ratio_div.innerHTML = `
+      $$
+         \\begin{aligned}
+            \\text{Forward static resistance}(R_F) &= \\frac{V_F}{I_F} = ${parseFloat(
+				(V_f / I_f).toFixed(3)
+			)} \\ k\\Omega \\\\ \\\\
+            \\text{Forward dynamic resistance}(r_F) &= \\frac{\ΔV_F}{\ΔI_F} = ${parseFloat(
+				(del_v_f / del_i_f).toFixed(3)
+			)} \\ k\Ω \\\\ \\\\
+            \\text{Reverse static resistance}(R_R) &= \\frac{V_R}{I_R} = ${parseFloat(
+				(V_r / I_r).toFixed(3)
+			)} \\ k\\Omega
+         \\end{aligned} 
+      $$
+   `;
+
 	pp.showdescription(
 		`
       <div class='discription_text'>
@@ -247,6 +276,10 @@ function a3_verify() {
 	);
 
 	show_panel(3);
+
+	setTimeout(() => {
+		MathJax.typeset();
+	}, 300);
 }
 
 function display_data_div() {
