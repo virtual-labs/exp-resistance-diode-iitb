@@ -168,9 +168,9 @@ function a1_draw_all_components() {
 }
 
 //list of all activity 1 questions
-function a1_load_questions() {}
+function a1_load_questions()
 {
-	question = [];
+	question = []; 
 	question.push({
 		srno: 1,
 		question: "Select <span style='color: #018fc3'>Diode</span>",
