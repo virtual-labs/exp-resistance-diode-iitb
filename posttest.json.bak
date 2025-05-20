@@ -1,0 +1,47 @@
+[
+   {
+      "question": "What is observed in the V-I characteristics of a p-n junction diode when it is forward-biased?",
+      "qid": 1,
+      "option_a": "Linear current increase with voltage",
+      "option_b": "Exponential current increase with voltage",
+      "option_c": "Constant current",
+      "option_d": "Current decreases with voltage",
+      "correct_option": "b"
+   },
+   {
+      "question": "What is the typical behavior of a diode when it enters breakdown in reverse bias?",
+      "qid": 2,
+      "option_a": "Continues blocking current",
+      "option_b": "Allows a large current to flow",
+      "option_c": "Gets damaged immediately",
+      "option_d": "Changes to forward-bias mode",
+      "correct_option": "b"
+   },
+   {
+      "question": "At what approximate voltage does a typical silicon diode start conducting in forward bias?",
+      "qid": 3,
+      "option_a": "0.1 V",
+      "option_b": "1.2 V",
+      "option_c": "0.3 V",
+      "option_d": "0.7 V",
+      "correct_option": "d"
+   },
+   {
+      "question": "What happens to the reverse current as the reverse voltage approaches breakdown in a diode?",
+      "qid": 4,
+      "option_a": "It decreases",
+      "option_b": "It remains constant",
+      "option_c": "It increases significantly",
+      "option_d": "It drops to zero",
+      "correct_option": "c"
+   },
+   {
+      "question": "Which of the following best describes the reverse saturation current in a p-n junction?",
+      "qid": 5,
+      "option_a": "Current due to minority carriers",
+      "option_b": "Current due to majority carriers",
+      "option_c": "No current",
+      "option_d": "Infinite current",
+      "correct_option": "a"
+   }
+]
