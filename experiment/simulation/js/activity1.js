@@ -111,8 +111,7 @@ function a1_draw_all_components() {
     scene.add(sq);
 }
 //list of all activity 1 questions
-function a1_load_questions() { }
-{
+function a1_load_questions() {
     question = [];
     question.push({
         srno: 1,
